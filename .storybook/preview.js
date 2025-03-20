@@ -1,13 +1,13 @@
-import ReactDOM from "react-dom/client";
-
-export const renderToCanvas = (args, { id, storyFn, showMain }) => {
-  const rootElement = document.getElementById(id);
-
-  if (rootElement._reactRootContainer) {
-    rootElement._reactRootContainer.unmount();
-  }
-
-  const root = ReactDOM.createRoot(rootElement);
-  root.render(storyFn());
-  rootElement._reactRootContainer = root;
+/** @type { import('@storybook/react').Preview } */
+const preview = {
+  parameters: {
+    controls: {
+      matchers: {
+       color: /(background|color)$/i,
+       date: /Date$/i,
+      },
+    },
+  },
 };
+
+export default preview;
