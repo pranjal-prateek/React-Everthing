@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import StarPattern from './StarPattern';
+import StarPattern from '../Machine Coding/Star Pattern/StarPattern';
 
 export default {
   title: 'Components/StarPattern',

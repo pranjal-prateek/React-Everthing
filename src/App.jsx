@@ -1,8 +1,21 @@
+import { useState } from "react";
 import "./App.css";
 import { ErrorBoundary } from "./ErrorBoundary/ErrorBoundary";
-import StarPattern from "./Machine Coding/Star Pattern";
-
+import CustomModal from "./Machine Coding/Modal/Modal";
 function App() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOpen = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleClose = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleClick = () => {
+    console.log('Button inside modal clicked');
+  };
   // const ref = useRef(null);
 
   // const handleClick = () => {
@@ -22,7 +35,19 @@ function App() {
       {/* <ForwardRef ref={ref} />
       <button onClick={handleClick}>button</button> */}
       {/* <ClassComponent /> */}
-      <StarPattern />
+      {/* <StarPattern/> */}
+      {isModalOpen && (
+        <CustomModal
+          title="Sample Modal Title"
+          description="This is a sample modal description."
+          handleClose={handleClose}
+          handleClick={handleClick}
+        >
+          <button onClick={handleClick}>Click Me</button>
+        </CustomModal>
+      )}
+      <button onClick={handleOpen}>Open Modal</button>
+
     </ErrorBoundary>
   );
 }
