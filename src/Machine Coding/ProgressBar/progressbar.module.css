@@ -1,0 +1,29 @@
+.progressBar {
+  width: 300px;
+  height: 20px;
+  border-radius: 20px;
+  background-color: rgb(237, 236, 236);
+  position: relative;
+  border: 1px solid rgb(186, 184, 184);
+  text-align: center; /* Center the text horizontally */
+}
+
+.progressActive {
+  height: 20px;
+  background-color: rgb(40, 75, 203);
+  border-radius: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1; /* Ensure progress bar is behind the text */
+}
+
+.progressBar span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+  line-height: 20px; /* Center the text vertically in the bar */
+  z-index: 2; /* Ensure text is above the progress bar */
+}

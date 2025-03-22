@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import { ErrorBoundary } from "./ErrorBoundary/ErrorBoundary";
-import CustomModal from "./Machine Coding/Modal/Modal";
+import ProgressBar from "./Machine Coding/ProgressBar/ProgressBar";
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -36,7 +36,7 @@ function App() {
       <button onClick={handleClick}>button</button> */}
       {/* <ClassComponent /> */}
       {/* <StarPattern/> */}
-      {isModalOpen && (
+      {/* {isModalOpen && (
         <CustomModal
           title="Sample Modal Title"
           description="This is a sample modal description."
@@ -46,7 +46,9 @@ function App() {
           <button onClick={handleClick}>Click Me</button>
         </CustomModal>
       )}
-      <button onClick={handleOpen}>Open Modal</button>
+      <button onClick={handleOpen}>Open Modal</button> */}
+
+      <ProgressBar/>
 
     </ErrorBoundary>
   );
