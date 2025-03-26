@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import { ErrorBoundary } from "./ErrorBoundary/ErrorBoundary";
-import ProgressBar from "./Machine Coding/ProgressBar/ProgressBar";
+import Calendar from "./Machine Coding/Calendar/calendar";
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -48,7 +48,9 @@ function App() {
       )}
       <button onClick={handleOpen}>Open Modal</button> */}
 
-      <ProgressBar/>
+      {/* <ProgressBar/> */}
+      {/* <DragAndDropComponent/> */}
+      <Calendar/>
 
     </ErrorBoundary>
   );
