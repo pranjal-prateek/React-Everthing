@@ -1,7 +1,8 @@
+
 import { useState } from "react";
 import "./App.css";
 import { ErrorBoundary } from "./ErrorBoundary/ErrorBoundary";
-import DragNDrop from "./Machine Coding/DragAndDrop/DragNDrop";
+import Pagination from "./Machine Coding/Pagination/Pagination";
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -51,7 +52,8 @@ function App() {
       {/* <ProgressBar/> */}
       {/* <DragAndDropComponent/> */}
       {/* <Calendar/> */}
-      <DragNDrop/>
+      {/* <DragNDrop/> */}
+      <Pagination/>
 
     </ErrorBoundary>
   );
